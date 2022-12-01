@@ -29,7 +29,7 @@ float ax, ay, az, gx, gy, gz;
 long map(long x, long eMin, long eMax, long sMin, long sMax) {
     return (x - eMin)*(sMax - sMin) / (eMax - eMin) + sMin;
 }
-
+//Hola
 
 long map(long x, long eMin, long eMax, long sMin, long sMax);
 char buffer[10];
@@ -42,17 +42,17 @@ void main() {
     MPU6050_Init();
     Servo_Init(); // Inicializa la funcion de los servos
     //LCD_Init();
-    Servo_1_Write(0); // Servo 1, 0°
+    Servo_1_Write(0); // Servo 1, 0Â°
     __delay_ms(1000);
     while (1) {
 
         value = map(v1, -10, 10, 180, 0);
 
-        Servo_1_Write(0); // Servo 1, 0°
+        Servo_1_Write(0); // Servo 1, 0Â°
         __delay_ms(1000);
-       Servo_1_Write(90); // Servo 1, 0°
+       Servo_1_Write(90); // Servo 1, 0Â°
         __delay_ms(1000);
-        Servo_1_Write(180); // Servo 1, 0°
+        Servo_1_Write(180); // Servo 1, 0Â°
         __delay_ms(1000);
 
     }
